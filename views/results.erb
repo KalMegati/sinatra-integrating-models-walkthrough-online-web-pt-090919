@@ -9,12 +9,21 @@
 <%= x = 0 %>
 <%= y = "" %>
 <% [*("A".."Z")].each do |letter| %>
+<<<<<<< HEAD
   <%= a = @text.upcase.count(letter) %>
   <%if a >= x%>
     <%= x = a %>
     <%= y = letter %>
   <% end %>
   <% #binding.pry%>
+=======
+  <%= binding.pry %>
+  <%= a = @text.upcase.count(letter) %>
+  <%if a > x%>
+    <%= x = a %>
+    <%= y = letter %>
+  <% end %>
+>>>>>>> d58a4eae7b36efec4eea3aed01742b0e474fbb32
 <% end %>
 
 <h2>Most Common Letter: <%="#{y}"%>, used <%="#{x}"%> times</h2>
